@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Product;
+use App\Models\Train;
 
-class ProductsTableSeeder extends Seeder
+class TrainTableSeeders extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,6 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        $product = config('db_seeder.products');
-        dd ()
+        //
     }
 }
