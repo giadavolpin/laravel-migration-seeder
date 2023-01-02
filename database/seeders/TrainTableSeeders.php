@@ -19,12 +19,14 @@ class TrainTableSeeders extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $newTrain = new Train();
             $newTrain->azienda = $faker->company();
-            $newTrain->stazione_partenza = $faker->city();
-            $newTrain->stazione_arrivo = $faker->city();
-            $newTrain->Orario_partenza = $faker->time();
-            $newTrain->Orario_arrivo = $faker->time();
-            $newTrain->Codice_treno = $faker->numberBetween(0, 100);
-            $newTrain->Numero_carrozze = $faker->randomDigit();
+            $newTrain->departure_station = $faker->city();
+            $newTrain->arrival_station = $faker->city();
+            $newTrain->orario_di_partenza = $faker->time();
+            $newTrain->orario_di_arrivo = $faker->time();
+            $newTrain->codice_treno = $faker->numberBetween(0, 100);
+            $newTrain->numero_carrozze = $faker->randomDigit();
+            $newTrain->in_orario = $faker->time(); //non è corretto xk sarebbe un booleano come faccio a farlo? 
+            $newTrain->cancellato = $faker->time();
             $newTrain->save();
         }
     }
